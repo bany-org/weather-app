@@ -12,6 +12,9 @@ function searchWeather() {
         alert('Please enter a city name');
     }
 
+    ELEMENTS.ELEMENT_LOADING_TEXT.style.display = 'block';
+    ELEMENTS.ELEMENT_WEATHER_BOX.style.display = 'none';
+
     const URL = 'https://api.openweathermap.org/data/2.5/weather?q=' + CITY_NAME + '&units=metric&appid=' + APP_ID;
     Http.fetechData(URL)
         .then(function(responseData) {
@@ -30,5 +33,6 @@ function updateWeather(weatherData) {
     ELEMENTS.ELEMENT_WEATHER_DESCRIPTION.textContent = weatherData.description;
     ELEMENTS.ELEMENT_WEATHER_TEMPERATURE.textContent = weatherData.temperature;
 
+    ELEMENTS.ELEMENT_LOADING_TEXT.style.display = 'none';
     ELEMENTS.ELEMENT_WEATHER_BOX.style.display = 'block';
 }
