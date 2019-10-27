@@ -30,5 +30,5 @@ function updateWeather(weatherData) {
     ELEMENTS.ELEMENT_WEATHER_DESCRIPTION.textContent = weatherData.description;
     ELEMENTS.ELEMENT_WEATHER_TEMPERATURE.textContent = weatherData.temperature;
 
-    ELEMENTS.ELEMENT_WEATHER_BOX.getElementsByClassName.display = 'block';
+    ELEMENTS.ELEMENT_WEATHER_BOX.style.display = 'block';
 }
