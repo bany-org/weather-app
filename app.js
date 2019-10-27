@@ -11,7 +11,7 @@ function searchWeather() {
         alert('Please enter a city name');
     }
 
-    const URL = 'http://api.openweathermap.org/data/2.5/weather?q=' + CITY_NAME + '&units=metric&appid=' + APP_ID;
+    const URL = 'https://api.openweathermap.org/data/2.5/weather?q=' + CITY_NAME + '&units=metric&appid=' + APP_ID;
     Http.fetechData(URL)
         .then(function(responseData) {
             console.log(responseData);
